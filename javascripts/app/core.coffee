@@ -13,6 +13,8 @@ window.RubyGems = (name) ->
     that = this
     $.ajax
       url: @configs.api + @query + ".json"
+      beforeSend: ->
+        $('#search').addClass('loading')
       error: ->
         that.exists = false
 

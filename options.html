@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RubyGems options</title>
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <script src="javascripts/libs/jquery.min.js"></script>
+    <script src="javascripts/app/core.js"></script>
+    <script src="javascripts/app/options.js"></script>
+  </head>
+  <body class="options">
+    <h3>RubyGems options</h3>
+    <form action="">
+      <label>
+        Always open in a new tab
+        <input name="open_in" type="radio" class="newtab" value="0" />
+      </label>
+      <br />
+      <label>
+        Open in the same tab if the url is rubygems.org
+        <input name="open_in" type="radio" class="sametab" value="1" />
+      </label>
+      <br />
+      <input type="submit" />
+      <p class="message"></p>
+    </form>
+  </body>
+</html>
+

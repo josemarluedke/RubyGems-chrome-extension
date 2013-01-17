@@ -26,5 +26,6 @@
     "default_icon": "images/icon.png",
     "default_title": "RubyGems",
     "default_popup": "popup.html"
-  }
+  },
+  "options_page": "options.html"
 }

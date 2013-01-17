@@ -20,6 +20,9 @@
         that = this;
         return $.ajax({
           url: this.configs.api + this.query + ".json",
+          beforeSend: function() {
+            return $('#search').addClass('loading');
+          },
           error: function() {
             return that.exists = false;
           },
