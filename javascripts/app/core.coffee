@@ -1,7 +1,7 @@
 if localStorage["open_in"] is undefined
   localStorage["open_in"] = "1" # Same tab only tab url is *rubygems.org*
 
-window.RubyGems = (name) ->
+RubyGems = (name) ->
   query: name
   configs:
     search: "https://rubygems.org/search?query="
@@ -36,7 +36,7 @@ openTab = (url) ->
 
 
 window.apply = (query, omnibox = true) ->
-  gem = new window.RubyGems query
+  gem = new RubyGems query
   gem.fetch()
 
   $(document).ajaxComplete ->
