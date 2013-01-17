@@ -2,31 +2,8 @@
 (function() {
 
   $(document).ready(function() {
-    chrome.tabs.getSelected(null, function(tab) {
-      return window.current_tab = tab;
-    });
     return $("form").submit(function() {
-      var app;
-      app = new window.RubyGems($("#search").val());
-      app.fetch();
-      $(document).ajaxComplete(function() {
-        var url;
-        if (app.exists) {
-          url = app.info.project_uri;
-        } else {
-          url = app.configs.search + app.query + "&source=chrome-extension";
-        }
-        if (/rubygems\.org/.test(current_tab.url)) {
-          chrome.tabs.update(current_tab.id, {
-            url: url
-          });
-          return window.close();
-        } else {
-          return chrome.tabs.create({
-            url: url
-          });
-        }
-      });
+      apply($('#search').val(), false);
       return false;
     });
   });
