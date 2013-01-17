@@ -1,30 +1,22 @@
 body {
+  width: 300px;
   background: #fafafa;
-}
-
-.popup {
-  width: 300px
+  height: auto
 }
 
 form {
-  height: 23px
+  position: relative;
 }
 
 #search {
   outline: none;
-  position: absolute;
   border-radius: 3px;
-  padding: 5px;
   border: 1px solid transparent;
   border-top: none;
   border-bottom: 1px solid #DDD;
   box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px rgba(255,255,255,.6), 0 1px 0 rgba(255,255,255,.6);
-  width: auto;
-  height: auto;
-  top: 1px;
-  bottom: 1px;
-  left: 1px;
-  right: 1px;
+  width: 95%;
+  height: 25px;
   padding: 5px 8px;
   font-size: 14px;
   color: #777;
@@ -32,4 +24,7 @@ form {
 
 .loading {
  background: url("../images/loading.gif") 96% no-repeat;
+}
+.results_wrapper {
+  display: none
 }

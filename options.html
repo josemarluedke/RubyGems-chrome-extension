@@ -3,27 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>RubyGems options</title>
-    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/options.css">
     <script src="javascripts/libs/jquery.min.js"></script>
     <script src="javascripts/app/core.js"></script>
     <script src="javascripts/app/options.js"></script>
   </head>
   <body class="options">
-    <h3>RubyGems options</h3>
-    <form action="">
-      <label>
-        Always open in a new tab
-        <input name="open_in" type="radio" class="newtab" value="0" />
-      </label>
-      <br />
-      <label>
-        Open in the same tab if the url is rubygems.org
-        <input name="open_in" type="radio" class="sametab" value="1" />
-      </label>
-      <br />
-      <input type="submit" />
-      <p class="message"></p>
-    </form>
+    <div class="sidebar">
+      <div class="content">
+        <img src="images/icon.png" alt="" />
+        <h3>RubyGems</h3>
+      </div>
+    </div>
+    <div class="content_wrapper">
+      <div class="content">
+        <form action="">
+          <h1>Options</h1>
+
+          <h3>Open</h3>
+          <label>
+            Always open in a new tab
+            <input name="open_in" type="radio" class="newtab" value="0" />
+          </label>
+          <br />
+          <label>
+            Open in the same tab if the url is rubygems.org
+            <input name="open_in" type="radio" class="sametab" value="1" />
+          </label>
+
+          <h3>Search</h3>
+          <label>
+            Show search results preview for non-exact match
+            <input type="checkbox" name="show_search" class="show_search" />
+          </label>
+
+          <p>
+            <input type="submit" value="Save options" />
+            <span class="message">&nbsp;</span>
+          </p>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
 
