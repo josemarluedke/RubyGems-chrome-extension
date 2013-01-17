@@ -1,4 +1,28 @@
 body {
-  background: #f0f0f0;
+  background: #fafafa;
   width: 300px;
+}
+
+form {
+  height: 23px
+}
+
+#search {
+  outline: none;
+  position: absolute;
+  border-radius: 3px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px rgba(255,255,255,.6), 0 1px 0 rgba(255,255,255,.6);
+  width: auto;
+  height: auto;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  padding: 5px 8px;
+  font-size: 14px;
+  color: #777;
 }
