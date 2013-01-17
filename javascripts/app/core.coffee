@@ -92,8 +92,6 @@ RubyGems = (name, omnibox = true) ->
       chrome.tabs.create url: url
 
 
-
-
 window.apply = (query, omnibox = true) ->
   return if query is ""
   gem = new RubyGems query, omnibox
