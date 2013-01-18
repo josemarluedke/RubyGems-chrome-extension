@@ -1,6 +1,6 @@
 # RubyGems Chrome Extension
 
-TODO: Write a project description
+RubyGems is a Chrome Extension for you easily search gems in RubyGems.org.
 
 
 ## Contributing
