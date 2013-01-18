@@ -65,20 +65,50 @@ RubyGems = (name, omnibox = true) ->
     $('.results_wrapper .results').html('')
 
     if this.results.length == 0
-      $('.results_wrapper .results').html("No entries found on RubyGems.org")
+      $('.results_wrapper .results').html("No entries found at RubyGems.org")
       return
 
     $.each this.results, (index, value)->
       $('.results_wrapper .results').append that.itemHtml(value)
 
-    $('.see_on_rubygems').click (event)->
+    $('.link_rubygems').click (event)->
       that.openTab that.searchUrl
 
     $('.link').click (event)->
       that.openTab $(event.target).attr('href')
 
+    $(document).unbind('keydown')
+    $(document).on 'keydown', (event)->
+      if event.keyCode == 40
+        that.selectNextLink()
+        false
+      else if event.keyCode == 38
+        that.selectPrevLink()
+        false
+
+    $('.results_wrapper').unbind('keydown')
+    $('.results_wrapper').on 'keydown', (event)->
+      if event.keyCode == 74
+        that.selectNextLink()
+        false
+      else if event.keyCode == 75
+        that.selectPrevLink()
+        false
+
+  selectNextLink: ->
+    if $("a.link:focus").length > 0
+      $(".link:focus").next('a').focus()
+    else
+      $(".link").first().focus()
+
+  selectPrevLink: ->
+    if $("a.link:focus").length > 0
+      $(".link:focus").prev('a').focus()
+    else
+      $(".link").last().focus()
+
   itemHtml: (item) ->
-    "<div><a class=\"link\" href=\"#{item.project_uri}\" taget=\"_blanck\">#{item.name}</a> #{item.version}</div>"
+    "<a class=\"link\" href=\"#{item.project_uri}\" taget=\"_blanck\">#{item.name} <small>#{item.version}</small></a>"
 
   openTab: (url) ->
     if localStorage["open_in"] == "1"
