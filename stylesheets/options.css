@@ -1,7 +1,8 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: verdana;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #404853;
   background: url("../images/texture.jpg");
 }
 
