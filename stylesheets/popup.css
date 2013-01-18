@@ -1,7 +1,9 @@
 body {
   width: 300px;
-  background: #fafafa;
-  height: auto
+  height: auto;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #404853;
+  background: url("../images/texture.jpg");
 }
 
 form {
@@ -23,8 +25,46 @@ form {
 }
 
 .loading {
- background: url("../images/loading.gif") 96% no-repeat;
+ background: #ffffff url("../images/loading.gif") 96% no-repeat;
 }
 .results_wrapper {
-  display: none
+  display: none;
+  margin-top: 15px;
+  color: #999999;
+  font-size: 13px;
 }
+
+a {
+  display: block;
+  color: #fff;
+  line-height: 22px;
+  text-decoration: none;
+  font-size: 14px;
+  background: #404853;
+  border-radius: 4px;
+  padding: 2px 5px;
+  margin-bottom: 1px;
+  border: 1px solid transparent;
+  text-shadow: 0px 1px 0 rgba(0,0,0,.6);
+}
+a small {
+  color: #999;
+  font-size: 90%;
+}
+a.link:hover, a.link:focus {
+  background: rgba(0,0,0, 0.15);
+  outline: none;
+  border-color: #888;
+  color: #888;
+  font-weight: bold;
+  text-shadow: 0px 1px 0 rgba(255,255,255,.6);
+}
+
+a.link_rubygems {
+  background: none;
+  color: #555;
+  float: right;
+  font-size: 13px;
+  padding-top: 5px
+}
+
