@@ -1,7 +1,12 @@
 # RubyGems Chrome Extension
 
-RubyGems is a Chrome Extension for you easily search gems in RubyGems.org.
+A simple way to see details or search for gems in [RubyGems.org](http://rubygems.org).
 
+Ruby developers, always want to use the latest version of gems. So, they go to [RubyGems.org](http://rubygems.org) to see if there are a new gem version available to use. This extension provides a better/faster way to do this.
+
+You can type in the url "gem rails" to go to [https://rubygems.org/gems/rails](https://rubygems.org/gems/rails) to see details about the gem. If the gem name doesn't exist, you'll go to the search page.
+
+We also have a "popup" to type the search and go to gem details. When the search doesn't have an exactly match, you'll see a search preview on popup.
 
 ## Contributing
 

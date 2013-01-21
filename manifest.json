@@ -1,8 +1,8 @@
 {
   "name": "RubyGems",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 2,
-  "description": "You can easily search gems in RubyGems.org.",
+  "description": "A simple way to see details or search for gems in RubyGems.org.",
   "icons": {
     "16": "images/icon-16x16.png",
     "48": "images/icon-48x48.png",
